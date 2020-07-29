@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import '../App';
+import '../../App.css';
 
 const Squares = () => {
     const [bgColor1, setBgColor1] = useState(false);

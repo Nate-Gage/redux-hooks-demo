@@ -1,6 +1,6 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { postAnnouncement } from '../actions/announceActions';
+import { postAnnouncement } from '../../actions/announceActions';
 
 const Announcement = () => {
     const dispatch = useDispatch();
@@ -11,8 +11,8 @@ const Announcement = () => {
             <p>Post your announcement</p>
             <form onSubmit={(e) => {
                 e.preventDefault();
-
-                dispatch(postAnnouncement(e.target.elements.announceInput.value))
+                dispatch(postAnnouncement(JSON.stringify(e.target.elements.announceInput.value)))
+                //console.log(JSON.stringify(e.target.elements.announceInput.value))
             }}>
                 <input
                     type="text"

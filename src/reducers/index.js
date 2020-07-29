@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux';
-import counterReducer from '../reducers/counter';
-import announcementReducer from '../reducers/announce';
+import counterReducer from '../reducers/counterReducer/counter';
+import announcementReducer from '../reducers/announceReducer/announce';
 
 const allReducers = combineReducers({
     counter: counterReducer,

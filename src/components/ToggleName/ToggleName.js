@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import lincolnpng from '../lincoln.png';
+import lincolnpng from '../../lincoln.png';
 
 const ToggleName = () => {
 

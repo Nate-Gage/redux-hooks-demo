@@ -1,10 +1,7 @@
 const announcementReducer = (state='', action) => {
     switch (action.type) {
-        case 'POST ANNOUNCEMENT':
-            return [
-                ...state,
-                action.announcement
-            ]
+        case 'POST_ANNOUNCEMENT':
+            return action.text;
         default:
             return state;
     }
