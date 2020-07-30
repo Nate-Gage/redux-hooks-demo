@@ -1,12 +1,24 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { increment, decrement } from '../../actions/counterActions';
+import { increment, decrement } from '../../actions/CounterAction/counterActions';
+import { createStore } from 'redux';
+import { Provider } from 'react-redux';
+import allReducers from '../../reducers/index';
+
+const CounterWrapper = () => {
+    const store = createStore(allReducers);
+    return (
+        <Provider store={store}>
+            <Counter data-test="counterComponent" />
+        </Provider>
+    );
+};
 
 // state.counter is grabbing the 'counter' reducer
 // in /reducers/index.js
 const Counter = () => {
     const dispatch = useDispatch();
-    const counter = useSelector(state => state.counter); 
+    const counter = useSelector(state => state.counter);
 
     return (
         <div>
@@ -19,4 +31,4 @@ const Counter = () => {
     );
 };
 
-export default Counter;
+export default CounterWrapper;

@@ -1,17 +1,17 @@
 import React from 'react';
 import './App.css';
-import Counter from './components/Counter/Counter';
+import CounterWrapper from './components/Counter/Counter';
 import ToggleName from './components/ToggleName/ToggleName';
 import Squares from './components/Square/Squares';
-import Announcement from './components/Announcement/Announcement';
+import AnnouncementWrapper from './components/Announcement/Announcement';
 
 function App() {
   return (
     <div className="App">
-      <Counter />
+      <CounterWrapper />
       <ToggleName />
       <Squares />
-      <Announcement />
+      <AnnouncementWrapper />
     </div>
   );
 }

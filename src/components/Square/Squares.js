@@ -8,7 +8,7 @@ const Squares = () => {
     const [bgColor4, setBgColor4] = useState(false);
 
     return (
-        <div id="squaresContainer">
+        <div id="squaresContainer" data-test="squaresComponent">
             <div 
                 id="topLeft"
                 style={{
